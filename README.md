@@ -4,15 +4,15 @@ Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji 
 
 ## Uruchomienie calej aplikacji
 
-# run_app.bat - uruchamia backend jak i front end
+```run_app.bat - uruchamia backend jak i front end```
 
-## Uruchamianie frontend'u
+# Uruchamianie frontend'u
 
-# run_streamlit.bat
+```run_streamlit.bat```
 
-## Uruchamianie tylko backend'u
+# Uruchamianie tylko backend'u
 
-# run_api.bat
+```run_api.bat```
 
 Endpointy API:
 
