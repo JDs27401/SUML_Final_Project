@@ -1,6 +1,9 @@
 # SUML_Final_Project
 
-Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji liniowej.
+# Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji liniowej.
+## Działanie aplikacji opiera się na wybraniu drużyn A i B
+## Następnie należy wybrać która drużyna jest drużyną gospodarzy, a w przypadku turniejów albo braku gospodarza można wybrać opcję bez
+## Forma meczu, np.: Friendly albo FIFA World Cup, określa typ rozgrywek 
 
 ## Uruchomienie calej aplikacji
 
