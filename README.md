@@ -4,19 +4,15 @@ Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji 
 
 ## Uruchomienie calej aplikacji
 
-Backend API startuje na `http://127.0.0.1:8000`, a frontend Streamlit na adresie pokazanym w terminalu.
+# run_app.bat - uruchamia backend jak i front end
 
-```powershell
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\run_app.bat
-```
+## Uruchamianie frontend'u
 
-Mozesz tez uruchomic warstwy osobno:
+# run_streamlit.bat
 
-```powershell
-.\run_api.bat
-.\run_streamlit.bat
-```
+## Uruchamianie tylko backend'u
+
+# run_api.bat
 
 Endpointy API:
 
@@ -26,9 +22,3 @@ Endpointy API:
 - `POST /retrain`
 
 Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w `Model/artifacts`.
-
-Projekt jest skonfigurowany pod Python 3.14.6. W PyCharm ustaw interpreter:
-
-```text
-C:\Users\djdom\Desktop\Pyton\SUML\SUML_Final_Project\.venv\Scripts\python.exe
-```
