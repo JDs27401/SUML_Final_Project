@@ -10,6 +10,9 @@ if not exist "%PYTHON_EXE%" (
 )
 
 cd /d "%PROJECT_ROOT%"
+"%PYTHON_EXE%" scripts\bootstrap_dependencies.py
+if errorlevel 1 exit /b 1
+
 start "Football Predictor API" "%PYTHON_EXE%" -m uvicorn App.api:app --host 127.0.0.1 --port 8000
 timeout /t 5 /nobreak > nul
 "%PYTHON_EXE%" -m streamlit run App\app.py
