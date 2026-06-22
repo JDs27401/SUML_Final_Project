@@ -11,7 +11,7 @@
 3. Szcowane gole określa ile bramek (w formie ułamkowej) strzeli drużyna według modelu. Z tych wartości jest brany przewidywany wynik
 4. Tabela przedstawia statystyki drużyn oraz ilość meczy przekazanych do modelu
 
-## Cechy modelu pozwalają podejrzeć konkretne wartości jakie zostały przekazane
+### Cechy modelu pozwalają podejrzeć konkretne wartości jakie zostały przekazane
 
 ## Uruchomienie calej aplikacji
 
