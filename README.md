@@ -1,34 +1,35 @@
 # SUML_Final_Project
 
-Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji liniowej.
+## Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji liniowej.
+* Działanie aplikacji opiera się na wybraniu drużyn A i B
+* Następnie należy wybrać która drużyna jest drużyną gospodarzy, a w przypadku turniejów albo braku gospodarza można wybrać opcję bez
+* Forma meczu, np.: Friendly albo FIFA World Cup, określa typ rozgrywek 
+
+## Wynik jest przedstawiany jako:
+1. Najpierw drużyna która według modelu wygra
+2. Przybliżony wynik meczu oraz delta bramek które strzelą drużyny, wyliczana jako różnia goli drużyny A - B
+3. Szcowane gole określa ile bramek (w formie ułamkowej) strzeli drużyna według modelu. Z tych wartości jest brany przewidywany wynik
+4. Tabela przedstawia statystyki drużyn oraz ilość meczy przekazanych do modelu
+
+### Cechy modelu pozwalają podejrzeć konkretne wartości jakie zostały przekazane
 
 ## Uruchomienie calej aplikacji
 
-Backend API startuje na `http://127.0.0.1:8000`, a frontend Streamlit na adresie pokazanym w terminalu.
+```run_app.bat - uruchamia backend jak i front end```
 
-```powershell
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\run_app.bat
-```
+## Uruchamianie frontend'u
 
-Mozesz tez uruchomic warstwy osobno:
+```run_streamlit.bat```
 
-```powershell
-.\run_api.bat
-.\run_streamlit.bat
-```
+## Uruchamianie tylko backend'u
 
-Endpointy API:
+```run_api.bat```
+
+## Endpointy API:
 
 - `GET /health`
 - `GET /metadata`
 - `POST /predict`
 - `POST /retrain`
 
-Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w `Model/artifacts`.
-
-Projekt jest skonfigurowany pod Python 3.14.6. W PyCharm ustaw interpreter:
-
-```text
-C:\Users\djdom\Desktop\Pyton\SUML\SUML_Final_Project\.venv\Scripts\python.exe
-```
+### Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w ```Model/artifacts```.
