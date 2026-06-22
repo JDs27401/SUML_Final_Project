@@ -1,35 +1,58 @@
 # SUML_Final_Project
 
-## Aplikacja Streamlit przewidujaca wynik meczu pilkarskiego na podstawie regresji liniowej.
-* Działanie aplikacji opiera się na wybraniu drużyn A i B
-* Następnie należy wybrać która drużyna jest drużyną gospodarzy, a w przypadku turniejów albo braku gospodarza można wybrać opcję bez
-* Forma meczu, np.: Friendly albo FIFA World Cup, określa typ rozgrywek 
+Aplikacja przewiduje wynik meczu pilkarskiego na podstawie regresji liniowej.
 
-## Wynik jest przedstawiany jako:
-1. Najpierw drużyna która według modelu wygra
-2. Przybliżony wynik meczu oraz delta bramek które strzelą drużyny, wyliczana jako różnia goli drużyny A - B
-3. Szcowane gole określa ile bramek (w formie ułamkowej) strzeli drużyna według modelu. Z tych wartości jest brany przewidywany wynik
-4. Tabela przedstawia statystyki drużyn oraz ilość meczy przekazanych do modelu
+Architektura:
+- FastAPI udostepnia backend API.
+- Streamlit udostepnia frontend.
+- Warstwy `Data` i `Model` odpowiadaja za dane, cechy i predykcje.
 
-### Cechy modelu pozwalają podejrzeć konkretne wartości jakie zostały przekazane
+## Jak dziala aplikacja
+
+1. Wybierasz dwie druzyny.
+2. Wybierasz, ktora druzyna jest gospodarzem, albo opcje boiska neutralnego.
+3. Wybierasz turniej, kraj rozegrania meczu i date meczu.
+4. Aplikacja zwraca predykcje, przyblizony wynik, szacowane gole i statystyki formy druzyn.
 
 ## Uruchomienie calej aplikacji
 
-```run_app.bat - uruchamia backend jak i front end```
+```powershell
+.\run_app.bat
+```
 
-## Uruchamianie frontend'u
+`run_app.bat` uruchamia backend i frontend. Przy pierwszym starcie:
+- tworzy lokalne `.venv`, jesli go nie ma,
+- instaluje brakujace biblioteki z `requirements.txt`,
+- uruchamia API na `http://127.0.0.1:8000`,
+- uruchamia frontend Streamlit.
 
-```run_streamlit.bat```
+Do utworzenia `.venv` potrzebny jest zainstalowany Python 3.14 dostepny jako `py -3.14` albo `python`.
 
-## Uruchamianie tylko backend'u
+## Uruchamianie warstw osobno
 
-```run_api.bat```
+Backend:
 
-## Endpointy API:
+```powershell
+.\run_api.bat
+```
+
+Frontend:
+
+```powershell
+.\run_streamlit.bat
+```
+
+## Endpointy API
 
 - `GET /health`
 - `GET /metadata`
 - `POST /predict`
 - `POST /retrain`
 
-### Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w ```Model/artifacts```.
+Dokumentacja API po uruchomieniu backendu:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w `Model/artifacts`.
