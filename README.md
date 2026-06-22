@@ -32,4 +32,4 @@
 - `POST /predict`
 - `POST /retrain`
 
-## Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w `Model/artifacts`.
+### Model trenuje sie automatycznie przy pierwszym uruchomieniu i zapisuje artefakt w ```Model/artifacts```.
