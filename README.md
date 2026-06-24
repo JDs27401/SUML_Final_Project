@@ -1,5 +1,10 @@
 # SUML_Final_Project
 
+## Autorzy:
+- s27401 Dominik Juchniewicz
+- s27016 Bartosz Kowalski
+- s25402 Miłosz Pawłowski
+
 Aplikacja przewiduje wynik meczu pilkarskiego na podstawie regresji liniowej.
 
 Architektura:
